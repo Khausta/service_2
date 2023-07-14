@@ -1,0 +1,147 @@
+@import "../base/utils";
+@import "../base/base";
+@import "../base/normalize";
+@import "../base/typography";
+
+.footer {
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 70px 0 46px;
+
+    @include nsm {
+        padding: 20px 0;
+    }
+
+    &__bg {
+        position: relative;
+        display: block;
+
+        img {
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+
+        }
+
+        @include nsm {
+            img {
+                transform: translate(-86%, -21%);
+                
+            }
+        }
+
+   
+    }
+
+    &__menu {
+        li:not(:last-of-type) {
+            padding-bottom: 12px;
+        }
+        a {
+            transition: all .2s linear;  
+
+            &:hover {
+                color: $YBlack; 
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 1.3fr;
+        grid-template-areas: 
+        "logo menu hours"
+        "phone menu cards";
+        grid-column-gap: 200px;
+        grid-row-gap: 50px;
+        padding-left: 87px;
+        
+        @include nlg {
+            padding-left: 16px;
+        }
+
+        @include nmd {
+            gap: 50px;
+        } 
+
+        @include nsm {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "phone"
+            "hours"
+            " cards";
+            grid-row-gap: 16px;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+
+        @include nsm {
+            display: none;
+        }
+    }
+
+    &__phone {
+        grid-area: phone;
+        font-family: 'Murecho';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: $YRealWhite;
+        
+        a {
+            transition: all .2s;
+            &:hover {
+                color: $YBlack;
+            }
+
+            @include nsm {
+                &:hover {
+                    color: $YRealWhite;
+                }
+            }
+        }
+
+    }
+
+    &__menu {
+        grid-area: menu;
+
+        @include nsm {
+            display: none;
+        }
+    }
+
+    &__hours {
+        grid-area: hours;
+    }
+
+    &__cards {
+        grid-area: cards;
+    }
+
+    &__text {
+        font-family: 'Murecho';
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 160.86%;
+        text-transform: uppercase;
+        color: $YRealWhite;
+        
+    }
+
+    &__payment-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+       
+       
+    }   
+}

@@ -1,0 +1,291 @@
+@import "./base/utils";
+@import "./base/base";
+@import "./base/normalize";
+@import "./base/typography";
+
+*,
+::after,
+::before {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+
+}
+
+.header, .city {  
+    position: relative;
+    z-index: 10;
+    max-width: 1920px;
+    margin: 0 auto;
+    transition: all .4s;
+    height: Clamp(50px, 15vw, 100px);
+
+
+    @include nsm {
+        height: 17vw;
+    }
+    
+   
+    &__sticky_js {
+        position: sticky;
+        top: 0;
+        z-index: 11;
+        background: $YBadWhite;
+        transition: all .4s;
+
+        .header__menu-item {
+            transition: all .4s;
+        }
+
+        .header__title {
+            color: $YRealWhite;
+        }
+    }
+
+    &__hide_js {
+        top: -100px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+
+        @include nsm {
+            display: none;
+        }
+    }
+
+    &__mobile-menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        color: #233146;
+        transition: all .4s;
+        
+        .header__title {
+            font-family: 'Nasalization';
+            font-weight: 400;
+            font-size: Clamp(22px, 4vw, 30px);
+            line-height: 83%;
+            text-transform: uppercase;
+            color: #233146;
+            position: relative;
+        }
+
+        @include nsm {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            transition: all .2s;
+        }
+
+        &__list {
+            display: none;
+
+            @include nsm {
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                top: 60px;
+                transition: all .2s;
+            }
+        }
+    }
+
+    &__mobile-title-wrapper {
+        position: relative;
+        display: flex;
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: Clamp(18px, 6vw, 20px);;
+        }
+    }
+
+    &__menu-burger {
+        height: 17px;
+        float: right;
+    }
+
+    &__line {
+        
+        &-1 {
+            background-color: #233146;
+            box-shadow: 0 7px 0 0 #233146;
+            width: 22px;
+            height: 2px;
+            display: block;
+            margin-bottom: 12px;
+          
+        }
+
+        &-3 {
+            background-color: #233146;
+            width: 11px;
+            height: 2px;
+            float: right;
+            display: block;
+        }
+    }
+
+    &__menu-black {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+     
+    &__menu-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: clamp(282px,34vw,608px);
+
+        &__head {
+            color:  #233146;
+        }
+    }
+
+    &__menu-item {
+        position: relative;
+        text-align: end;
+    
+        a {
+            font-family: 'Impact';
+            font-style: normal;
+            font-weight: 400;
+            font-size: Clamp(13px, 1vw, 22px);
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #233146;
+            transition: all .2s linear;
+            &::before {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                position: absolute;
+                transform: translateX(-50%);
+                left: 50%;
+                top: 27px;
+                background-color: $YRed;
+                border-radius: 5px;
+                z-index: -1;  
+            }
+
+            &:hover {
+            
+                &::before {
+                    width: 100%;
+                    transition: all .2s linear;
+                }
+            }
+        }    
+    }
+
+    // &__menu-item-white {
+    //     a {
+    //         color: $YRealWhite;
+    //     }
+    // }
+    
+    &__mobile-list {
+        position: fixed;
+        display: none;
+        top: 0;
+        width: 100vw;
+        height: max-content;
+        background: $YBadWhite;
+        z-index: 101;
+        color:  #233146;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 20px;
+            transition: all .2s;
+            color:  #233146;
+
+            li {
+                margin-bottom: 5vw;
+            }
+
+            a {
+                color:  #233146;
+                font-size: 5vw;
+            }
+        }
+      
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color:  #233146;
+            height: 17vw;
+                 
+            .header__title {
+                font-family: 'Nasalization';
+                font-weight: 400;
+                font-size: 8vw;
+                line-height: 83%;
+                text-transform: uppercase;
+                color: #233146;
+                position: relative;
+            }
+
+        }
+
+        &__close {
+            width: 22px;
+            height: 23px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18vw;
+
+        }
+
+        &__line {
+   
+            &-1 {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background-color:  #233146;
+                transform: rotate(45deg);
+            }
+
+            &-2 {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background-color: #233146;;
+                transform: translateX(0%) translateY(-100%) rotate(-45deg);
+            }
+        }
+    }
+
+  
+  
+}
+
+._active {
+    display: block;
+}
+
+.header-traid-in__sticky_js {
+    position: sticky;
+    background: #000;
+    top: 0;
+}
+
+.header-traid-in__hide_js {
+    top: -200px;
+}
+
+

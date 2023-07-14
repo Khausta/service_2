@@ -1,0 +1,166 @@
+@import "../base/utils";
+@import "../base/base";
+@import "../base/normalize";
+@import "../base/typography";
+
+.footer {
+
+    background-color: $YBlack;
+    padding-top: 67px;
+    padding-bottom: 79px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @include nsm {
+        padding-top: 7vw;
+        padding-bottom: 0;
+    }
+
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: Clamp(1px, 1.5vw, 20px);
+        line-height: 160.86%;
+         text-transform: uppercase;
+        color: #FFFFFF;
+        
+        @include nsm {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // max-width: 255px;
+            font-size: 6.4vw;
+        }
+    }
+
+    &__payment-list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 33px;
+
+        @include nsm {
+            margin: 3.2vw 0 4.4vw;
+
+            li {
+                img {
+                    height: 6vw;
+                }
+
+                &:nth-child(2) {
+                    img {
+                        height: 9vw;
+                    }
+                }
+            }
+
+        }
+
+       
+    }
+    &__menu-list {
+        li:nth-child(3) {
+            margin-bottom: 35px;
+        }
+            
+        a {
+            font-size: Clamp(1px, 1.6vw ,22px);
+
+            &:hover {
+                color: $YRed;
+                transition: all .2s;
+            }
+        }   
+
+        @include nsm {
+            display: none;
+        }
+    }
+
+    &__phone {
+
+
+        @include nsm {
+            font-size: 6.3vw;
+            padding: 0;
+        }
+
+        a {
+            &:hover {
+                color: $YRed;
+                transition: all .2s;
+
+               
+            }
+
+            @include nsm {
+                font-size: 8.1vw;
+            }
+        }
+
+        @include nsm {
+            width: 100%;
+            text-align: center;
+        }
+
+        &_link {
+            padding-bottom: 75px;
+            
+            @include nsm {
+                margin-bottom: 4vw;
+            }
+        }
+
+        &_hours {
+
+            @include nsm {
+                margin-bottom: 10vw;
+            }
+        }
+
+
+    }  
+
+    &__logo {
+
+        @include nsm {
+            display: none;
+        }
+    }
+
+    &__logo-mob {
+        display: none;
+
+        @include nsm {
+            display: block;
+            margin-bottom: 11.3vw;
+
+            img {
+                height: 22.5vw;
+            }
+        }
+    }
+
+    // &__cards {
+
+    //     @include nsm {
+    //         text-align: center;
+
+    //         a {
+    //             display: none;
+    //         }
+    //     }
+    // }
+
+
+}
+
+.footer__content.container-box {
+    padding: 0;
+    margin: 0 auto;
+}

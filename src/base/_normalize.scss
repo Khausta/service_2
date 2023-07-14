@@ -1,0 +1,96 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  // background: #181818;
+  color: #ffffff;
+  box-sizing: border-box;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+	  outline: none;
+
+    &:active{
+      outline: none;
+    }
+  }
+
+  ::-moz-focus-outer, ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: outside none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: unset;
+  &:active{
+    outline: none;
+  }
+}
+
+iframe {
+  border: 0;
+}
+
+area {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+textarea {
+  outline: none;
+}
+
+select {
+  border: 0;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ select, input, textarea {
+  font-size: 14px;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 400;
+  // color: #fff;
+}
+
+.ekko-lightbox .modal-dialog .modal-content .ekko-lightbox-container input {
+  background: none !important;
+}
+
+.ekko-lightbox .modal-dialog .modal-content .ekko-lightbox-container input:focus {
+  background: none !important;
+}

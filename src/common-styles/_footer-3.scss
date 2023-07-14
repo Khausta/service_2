@@ -1,0 +1,309 @@
+@import "../base/utils";
+@import "../base/base";
+@import "../base/normalize";
+@import "../base/typography";
+
+.footer {
+    background-color: $YBlack;
+    padding-top: 67px;
+    padding-bottom: 79px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @include nsm {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        font-family: 'Impact';
+         font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+         text-transform: uppercase;
+        color: #FFFFFF;
+        
+        @include nmd {
+            flex-direction: column;
+            justify-content: center;
+            max-width: 255px;
+        }
+    }
+
+    &__payment-list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 33px;
+
+        li:nth-child(2) {
+            margin: 0 30px;
+        }
+       
+        @include nsm {
+            margin-top: 8px;
+            width: min-content;
+            
+            li {
+                
+                
+                &:nth-child(1) {
+                    img {
+                        height: 16px;
+                    }    
+                }
+                &:nth-child(2) {
+                   
+                    
+                        margin: 0 15px;
+                    
+
+                    img {
+                        height: 25px;
+                        
+                    }
+                }    
+                
+                &:nth-child(3) {
+                    img {
+                        height: 16px;
+                    }    
+                }
+           
+           
+        }
+    }
+
+    }
+
+    &__menu-list {
+        
+        li:nth-child(3) {
+            margin-bottom: 35px;
+        }
+            
+        a {
+            font-size: 22px;
+
+            &:hover {
+                color: $YRed;
+                transition: all .2s;
+            }
+        }   
+
+        @include nmd {
+            display: none;
+        }
+    }
+
+    &__phone {
+        padding-bottom: 75px;
+
+        a {
+            &:hover {
+                color: $YRed;
+                transition: all .2s;
+            }
+        }
+
+        @include nmd {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include nsm {
+            padding-bottom: 20px;
+            a {
+                font-size: 28px;
+            }
+
+        }
+    }  
+
+    &__logo {
+
+        @include nmd {
+            display: none;
+        }
+    }
+
+    &__logo-mob {
+        display: none;
+
+        @include nmd {
+            display: block;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__cards {
+
+        @include nmd {
+            text-align: center;
+        }
+    }
+
+
+}
+// .footer {
+//     background-color: #181818;
+//     padding-top: 67px;
+//     padding-bottom: 79px;
+//     max-width: 1920px;
+//     margin: 0 auto;
+    
+//     &__content {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr;
+//         column-gap: 237px;
+//         overflow: hidden;
+//         font-family: 'Impact';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 20px;
+//         text-transform: uppercase;
+//         color: #FFFFFF; 
+//         grid-template-areas: 
+//         "phone menu cards"
+//         "hours menu logo";
+
+//         @include nmd {
+//             grid-template-columns: 1fr;
+//             row-gap: 20px;
+//             justify-items: center;
+//             grid-template-areas: 
+       
+//         "hours"
+//         "cards"
+//         "phone"
+//         "logo";
+
+//     }
+//     }
+
+//     &__phone {
+//         grid-area: phone;
+//     }
+
+//     &__hours {
+//         grid-area: hours;
+//     }
+
+//     &__menu {
+//         grid-area: menu;
+
+//         @include nmd {
+//             display: none;
+//         }
+//     }
+
+//     &__cards {
+//         grid-area: cards;
+//         max-width: 250px;
+
+//         @include nmd {
+//             width: 50%;
+//             text-align: center;
+
+//             a {
+//                 display: none;
+//             }
+//         }
+//     }
+
+//     &__logo {
+//         grid-area: logo;
+
+//         @include nmd {
+//             display: none;
+//         }
+//     }
+
+//     &__payment-list {
+//         display: flex;
+//         justify-content: space-between;
+//         margin-top: 25px;
+//         margin-bottom: 33px;
+//     }
+
+//     &__menu-list {
+//         li:nth-child(3) {
+//             margin-bottom: 35px;
+//         }
+            
+//         a {
+//             font-size: 22px;
+//             &:hover {
+//                 color: $YRed;
+//                 transition: all .2s;
+//             }
+//         } 
+//     }
+
+//     &__phone {
+
+//         a {
+            
+//             &:hover {
+//                 color: $YRed;
+//                 transition: all .2s;
+//             }
+//         }
+//     }
+// }
+// .footer {
+//     background-color: #181818;
+//     padding-top: 67px;
+//     padding-bottom: 79px;
+//     max-width: 1920px;
+//     margin: 0 auto;
+
+//     &__content {
+//         display: flex;
+//         justify-content: space-between;
+//         overflow: hidden;
+//         font-family: 'Impact';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 20px;
+//         text-transform: uppercase;
+//         color: #FFFFFF; 
+//     }
+
+//     &__payment-list {
+//         display: flex;
+//         justify-content: space-between;
+//         margin-top: 25px;
+//         margin-bottom: 33px;
+//     }
+
+//     &__menu-list {
+//         li:nth-child(3) {
+//             margin-bottom: 35px;
+//         }
+            
+//         a {
+//             font-size: 22px;
+//             &:hover {
+//                 color: $YRed;
+//                 transition: all .2s;
+//             }
+//         } 
+//     }
+
+//     &__phone {
+//         padding-bottom: 75px;
+
+//         a {
+            
+//             &:hover {
+//                 color: $YRed;
+//                 transition: all .2s;
+//             }
+//         }
+//     }
+// }
